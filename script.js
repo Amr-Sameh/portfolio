@@ -740,4 +740,19 @@ document.addEventListener('DOMContentLoaded', function() {
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
     }
-}); 
+});
+
+// CV Download Function
+function downloadCV() {
+    // Create a hidden window for the CV
+    const cvWindow = window.open('cv.html?download=true', '_blank', 'width=800,height=600');
+    
+    // Wait for the page to load, then trigger print
+    cvWindow.addEventListener('load', function() {
+        setTimeout(() => {
+            cvWindow.print();
+            // Close the window after printing (optional)
+            // cvWindow.close();
+        }, 1000);
+    });
+} 
