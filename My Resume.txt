@@ -1,0 +1,79 @@
+Amr Sameh 
+Cairo,Egypt 
++201005381550
+amrsameh.develop@gmail.com
+
+Summary
+Software Engineer with experience in designing and delivering scalable, high-performance systems. Dedicated to writing clean, maintainable code and building reliable solutions that align with business goals. Skilled in system design, problem-solving, and applying best practices across the software development lifecycle. Strong team player with proven adaptability in fast-paced environments, effective communication skills, and a focus on continuous improvement. Passionate about innovation, learning, and creating software that drives real impact.
+
+Education
+Helwan University                   Computer Science 
+07/2019
+Helwan 
+Our graduation project achieved first place in Ibtiecar Competition, a competition organized by EgyptInnovate and the National Telecom Regulatory Authority, and we published a research paper titled “Trackify: A Robust System for Preserving Money Transactions” in ScienceDirect.
+
+Skills
+kotlin
+Java
+Spring Boot
+JDBC
+Databases
+REST
+Spring
+MySql
+PostgreSQL
+Software Development Life Cycle
+Software Architecture
+Unit Testing
+CI/CD
+Kafka
+RabbitMQ
+GIT
+GCP
+PHP
+Python
+
+Experience
+Senior Software Engineer 
+Coral Technology                   04/2021 - Present
+Cairo,Egypt 
+Designed and implemented scalable solutions following a microservices architecture.
+Developed and maintained multiple services, ensuring reliability and performance.
+Optimized and refactored legacy code to improve maintainability and efficiency.
+Migrated core services from PHP to Spring Boot with Kotlin, enhancing system scalability and stability.
+Collaborated closely with team members on software design and feature implementation.
+Reviewed code and provided constructive feedback to uphold best practices and improve overall code quality.
+Implemented monitoring and logging practices to improve system observability and faster issue resolution.
+Contributed to technical documentation to ensure knowledge sharing and smooth onboarding of new team members.
+Software Engineer 
+Upwork                   06/2016 - Present
+Delivered tailored software solutions for clients across different domains, covering the full development lifecycle from requirements gathering to deployment. Designed and implemented scalable applications, integrated third-party services, and optimized existing systems for performance and reliability. Collaborated directly with clients to translate business needs into technical solutions while ensuring timely delivery and high-quality standards.
+Senior Software Engineer 
+CRYPTDEV                   08/2020 - 06/2023
+Greece 
+Designed and developed scalable applications leveraging Spring Boot and modern frameworks.
+Implemented system integrations across internal and external platforms to ensure seamless communication.
+Applied expertise in Spring Boot and integration patterns to deliver robust APIs and secure data exchange.
+Collaborated with and led cross-functional teams to design, build, and deliver high-quality software solutions.
+Gathered and analyzed client requirements, translating them into technical specifications for successful project delivery.
+Backend Developer 
+Upper Medic                   08/2019 - 08/2020
+Cairo 
+Contributed to the development of a medical platform functioning as a CRM, enabling patients to book appointments and providing content creators with tools to manage doctors’ accounts within a marketplace model.
+Junior Software Engineer 
+Q8intouch                   12/2018 - 08/2020
+Kuwait 
+Assisted in building and maintaining backend services, focusing on clean and efficient code. Supported the development of APIs, database queries, and system integrations under senior guidance. Collaborated with team members on debugging, testing, and delivering features, while gaining hands-on experience with backend frameworks, version control, and software development best practices.
+
+Publications
+
+Blockchain for tracking serial numbers in money exchanges
+Trackify: A Robust System For Preserving Money Transactions
+
+Languages
+Arabic
+English
+
+Awards
+1st place project at Ibtiecar Competition
+Participated at Egyptian Engineering Day (EED'19)
