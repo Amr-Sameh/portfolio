@@ -759,30 +759,33 @@ function downloadCV() {
 
 // Binary transformation for logo
 function initBinaryTransform() {
-    const logoCode = document.querySelector('.logo-code');
-    if (!logoCode) return;
+    const terminalCursor = document.querySelector('.terminal-cursor');
+    if (!terminalCursor) return;
     
-    const original = logoCode.getAttribute('data-original');
-    const binarySequences = ['101', '010', '110', '001', '111', '000', '100', '011', '1010', '0101'];
-    let currentIndex = 0;
+    const original = terminalCursor.getAttribute('data-original');
+    const terminalCommands = [
+        'ls', 'cd', 'cp', 'mv', 'rm', 'ps', 'cat', 'pwd', 'top', 'vim', 
+        'git', 'npm', 'ssh', 'scp', 'tar', 'zip', 'who', 'man', 'env', 
+        'echo', 'find', 'grep', 'kill', 'tail', 'head', 'sort', 'node', 
+        'curl', 'wget', 'nano', 'make', 'diff', 'date', 'ping', 'less'
+    ];
     
-    function transformToBinary() {
-        // Random binary sequence
-        const randomBinary = binarySequences[Math.floor(Math.random() * binarySequences.length)];
-        logoCode.innerHTML = randomBinary;
+    function transformCursor() {
+        // Random terminal command
+        const randomCommand = terminalCommands[Math.floor(Math.random() * terminalCommands.length)];
+        terminalCursor.textContent = randomCommand;
         
         setTimeout(() => {
-            logoCode.innerHTML = original;
-        }, 180);
+            terminalCursor.textContent = original;
+        }, 300);
     }
     
-    // Transform during animation peaks
+    // Transform cursor with 45% chance every 350ms for more activity
     setInterval(() => {
-        // Randomly transform with 35% chance every 450ms for more activity
-        if (Math.random() < 0.35) {
-            transformToBinary();
+        if (Math.random() < 0.45) {
+            transformCursor();
         }
-    }, 450);
+    }, 350);
 }
 
 // Initialize binary transformation on load

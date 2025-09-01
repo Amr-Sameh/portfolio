@@ -113,8 +113,8 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
-    min-width: 120px;
-    width: 120px;
+    min-width: 145px;
+    width: 145px;
 }
 
 .logo-design::before {
@@ -251,11 +251,32 @@ body {
     font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
-    animation: binaryTransform 4s ease-in-out infinite;
     position: relative;
-    width: 40px;
+    width: 65px;
     display: inline-block;
-    text-align: center;
+    text-align: left;
+}
+
+.terminal-prompt {
+    color: #00ff88;
+    text-shadow: 0 0 8px rgba(0, 255, 136, 0.5);
+}
+
+.terminal-cursor {
+    color: #00ff88;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
+    animation: cursorBlink 2s ease-in-out infinite;
+}
+
+@keyframes cursorBlink {
+    0%, 50% {
+        opacity: 1;
+        text-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
+    }
+    51%, 100% {
+        opacity: 0.3;
+        text-shadow: 0 0 5px rgba(0, 255, 136, 0.3);
+    }
 }
 
 .logo-code::before {
@@ -356,12 +377,18 @@ body {
     }
 }
 
-.logo-design:hover .logo-code {
+.logo-design:hover .terminal-prompt {
+    color: #00ffcc;
+    text-shadow: 
+        0 0 15px rgba(0, 255, 204, 0.8),
+        0 0 25px rgba(0, 255, 136, 0.5);
+}
+
+.logo-design:hover .terminal-cursor {
     color: #00ffdd;
     text-shadow: 
-        0 0 25px rgba(0, 255, 221, 0.9),
-        0 0 50px rgba(0, 255, 136, 0.5);
-    transform: scale(1.15) rotate(10deg);
+        0 0 20px rgba(0, 255, 221, 0.9),
+        0 0 40px rgba(0, 255, 136, 0.6);
     animation-duration: 1s;
 }
 
