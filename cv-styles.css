@@ -105,6 +105,14 @@ body {
     line-height: 1.5;
 }
 
+.section-content p {
+    margin-bottom: 10px;
+}
+
+.section-content p:last-child {
+    margin-bottom: 0;
+}
+
 /* Experience Items */
 .experience-item {
     margin-bottom: 20px;

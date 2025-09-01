@@ -260,10 +260,12 @@
         window.addEventListener('load', function() {
             const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.get('download') === 'true') {
-                // Small delay to ensure page is fully rendered
+                // Ensure all fonts and content are loaded before printing
                 setTimeout(() => {
+                    // Hide URL from title when printing
+                    document.title = 'Amr Sameh - CV';
                     window.print();
-                }, 500);
+                }, 800);
             }
         });
         
