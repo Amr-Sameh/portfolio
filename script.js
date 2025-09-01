@@ -155,13 +155,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Navbar background on scroll
+    // Clean navbar scroll effect without positioning interference
     window.addEventListener('scroll', function() {
         const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 100) {
-            navbar.style.background = 'rgba(10, 10, 10, 0.98)';
-        } else {
-            navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+        if (navbar) {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
         }
     });
 
@@ -251,20 +253,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Enhanced parallax effect for hero section
+    // Simplified parallax effect for hero section only
     window.addEventListener('scroll', function() {
         const scrolled = window.pageYOffset;
-        const hero = document.querySelector('.hero');
         const heroImage = document.querySelector('.profile-image');
-        const heroText = document.querySelector('.hero-text');
         
-        if (hero && heroImage) {
-            const rate = scrolled * -0.3;
-            const textRate = scrolled * -0.1;
+        if (heroImage && scrolled < window.innerHeight) {
+            const rate = scrolled * -0.2;
             heroImage.style.transform = `translateY(${rate}px) scale(${1 + scrolled * 0.0001})`;
-            if (heroText) {
-                heroText.style.transform = `translateY(${textRate}px)`;
-            }
         }
     });
 
@@ -372,29 +368,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1000);
     });
 
-    // Performance optimization
-    let ticking = false;
-    
-    function updateOnScroll() {
-        // Navbar background update with new color
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 100) {
-            navbar.style.background = 'rgba(14, 18, 17, 0.8)';
-            navbar.style.backdropFilter = 'blur(12px)';
-        } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.02)';
-            navbar.style.backdropFilter = 'blur(8px)';
-        }
-        
-        ticking = false;
-    }
-    
-    window.addEventListener('scroll', function() {
-        if (!ticking) {
-            requestAnimationFrame(updateOnScroll);
-            ticking = true;
-        }
-    });
+    // Removed duplicate scroll handler to prevent navbar positioning conflicts
 });
 
 // EmailJS Configuration & Contact Form Functionality with Spam Protection
