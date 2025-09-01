@@ -1119,6 +1119,204 @@ section:not(.hero) {
     left: 100%;
 }
 
+/* Certifications Section */
+.certifications {
+    padding: 5rem 0;
+    background: var(--bg-primary);
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.cert-item {
+    background: linear-gradient(145deg, var(--bg-glass) 0%, var(--bg-glass-strong) 100%);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2.5rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.cert-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #0077b5 0%, #00a0dc 50%, #0077b5 100%);
+    background-size: 200% 100%;
+    animation: shimmerCert 3s ease-in-out infinite;
+}
+
+@keyframes shimmerCert {
+    0%, 100% { background-position: 200% 0; }
+    50% { background-position: -200% 0; }
+}
+
+.cert-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--border-hover);
+}
+
+.cert-item:hover::before {
+    animation-duration: 1.5s;
+}
+
+.cert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.cert-provider {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: linear-gradient(135deg, #0077b5, #00a0dc);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(0, 119, 181, 0.3);
+}
+
+.cert-provider i {
+    font-size: 1.3rem;
+}
+
+.cert-date {
+    background: var(--bg-glass-strong);
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+}
+
+.cert-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.cert-duration {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    padding: 0.8rem 1.2rem;
+    background: var(--bg-glass);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.cert-duration i {
+    color: #0077b5;
+    font-size: 1.1rem;
+}
+
+.cert-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.cert-skill {
+    background: linear-gradient(135deg, var(--bg-glass-strong) 0%, var(--bg-glass) 100%);
+    color: var(--text-primary);
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.cert-skill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.cert-skill:hover::before {
+    left: 100%;
+}
+
+.cert-skill:hover {
+    transform: translateY(-2px);
+    border-color: var(--border-hover);
+}
+
+.cert-actions {
+    display: flex;
+    justify-content: center;
+}
+
+.cert-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(0, 119, 181, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.cert-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.cert-link:hover::before {
+    left: 100%;
+}
+
+.cert-link:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 119, 181, 0.5);
+}
+
+.cert-link i {
+    font-size: 1.1rem;
+}
+
 /* Publications Section */
 .publications {
     background: none;
