@@ -756,3 +756,36 @@ function downloadCV() {
         }, 1000);
     });
 } 
+
+// Binary transformation for logo
+function initBinaryTransform() {
+    const logoCode = document.querySelector('.logo-code');
+    if (!logoCode) return;
+    
+    const original = logoCode.getAttribute('data-original');
+    const binarySequences = ['101', '010', '110', '001', '111', '000', '100', '011', '1010', '0101'];
+    let currentIndex = 0;
+    
+    function transformToBinary() {
+        // Random binary sequence
+        const randomBinary = binarySequences[Math.floor(Math.random() * binarySequences.length)];
+        logoCode.innerHTML = randomBinary;
+        
+        setTimeout(() => {
+            logoCode.innerHTML = original;
+        }, 180);
+    }
+    
+    // Transform during animation peaks
+    setInterval(() => {
+        // Randomly transform with 35% chance every 450ms for more activity
+        if (Math.random() < 0.35) {
+            transformToBinary();
+        }
+    }, 450);
+}
+
+// Initialize binary transformation on load
+document.addEventListener('DOMContentLoaded', function() {
+    initBinaryTransform();
+});

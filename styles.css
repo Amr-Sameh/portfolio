@@ -113,6 +113,8 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
+    min-width: 120px;
+    width: 120px;
 }
 
 .logo-design::before {
@@ -149,6 +151,55 @@ body {
     font-family: 'Inter', -apple-system, sans-serif;
     position: relative;
     animation: shimmer 3s ease-in-out infinite;
+    width: 50px;
+    display: inline-block;
+    text-align: center;
+}
+
+.logo-separator {
+    color: #00ff88;
+    font-weight: 700;
+    margin: 0 0.1em;
+    text-shadow: 
+        0 0 8px rgba(0, 255, 136, 0.6),
+        0 0 15px rgba(0, 255, 136, 0.3);
+    animation: separatorPulse 1.8s ease-in-out infinite;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    background: unset;
+    transition: all 0.3s ease;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+@keyframes separatorPulse {
+    0%, 100% {
+        color: #00ff88;
+        text-shadow: 
+            0 0 5px rgba(0, 255, 136, 0.4),
+            0 0 10px rgba(0, 255, 136, 0.2);
+        transform: scale(1) rotate(0deg);
+    }
+    25% {
+        color: #00ffcc;
+        text-shadow: 
+            0 0 15px rgba(0, 255, 204, 0.7),
+            0 0 25px rgba(0, 255, 136, 0.3);
+        transform: scale(1.2) rotate(5deg);
+    }
+    50% {
+        color: #00ffaa;
+        text-shadow: 
+            0 0 20px rgba(0, 255, 170, 0.8),
+            0 0 30px rgba(0, 255, 136, 0.4);
+        transform: scale(1.1) rotate(-3deg);
+    }
+    75% {
+        color: #00ff99;
+        text-shadow: 
+            0 0 12px rgba(0, 255, 153, 0.6),
+            0 0 20px rgba(0, 255, 136, 0.3);
+        transform: scale(1.15) rotate(2deg);
+    }
 }
 
 @keyframes shimmer {
@@ -184,25 +235,129 @@ body {
     color: #00ff88;
     font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
-    animation: codeGlow 2s ease-in-out infinite alternate;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
+    animation: binaryTransform 4s ease-in-out infinite;
+    position: relative;
+    width: 40px;
+    display: inline-block;
+    text-align: center;
 }
 
-@keyframes codeGlow {
-    0% {
-        text-shadow: 0 0 5px rgba(0, 255, 136, 0.3);
+.logo-code::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    color: #00ff88;
+    text-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
+}
+
+@keyframes binaryTransform {
+    0%, 12% {
+        opacity: 1;
+        color: #00ff88;
+        text-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
         transform: scale(1);
     }
-    100% {
-        text-shadow: 0 0 15px rgba(0, 255, 136, 0.6);
+    
+    15% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    
+    18% {
+        opacity: 1;
+        color: #00ffaa;
+        text-shadow: 0 0 15px rgba(0, 255, 170, 0.8);
+        transform: scale(1.2);
+    }
+    
+    35% {
+        opacity: 1;
+        color: #44ff88;
+        text-shadow: 0 0 20px rgba(68, 255, 136, 0.9);
+        transform: scale(1.1);
+    }
+    
+    38% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    
+    42% {
+        opacity: 1;
+        color: #00ffcc;
+        text-shadow: 0 0 25px rgba(0, 255, 204, 0.9);
+        transform: scale(1.15);
+    }
+    
+    58% {
+        opacity: 1;
+        color: #00ff99;
+        text-shadow: 0 0 18px rgba(0, 255, 153, 0.7);
         transform: scale(1.05);
+    }
+    
+    62% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    
+    65% {
+        opacity: 1;
+        color: #00ffaa;
+        text-shadow: 0 0 15px rgba(0, 255, 170, 0.6);
+        transform: scale(1.08);
+    }
+    
+    80% {
+        opacity: 1;
+        color: #00ff88;
+        text-shadow: 0 0 12px rgba(0, 255, 136, 0.5);
+        transform: scale(1);
+    }
+    
+    83% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    
+    87% {
+        opacity: 1;
+        color: #00ff88;
+        text-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
+        transform: scale(1.1);
+    }
+    
+    100% {
+        opacity: 1;
+        color: #00ff88;
+        text-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
+        transform: scale(1);
     }
 }
 
 .logo-design:hover .logo-code {
-    color: #00ffaa;
-    text-shadow: 0 0 20px rgba(0, 255, 170, 0.8);
-    transform: scale(1.1) rotate(5deg);
+    color: #00ffdd;
+    text-shadow: 
+        0 0 25px rgba(0, 255, 221, 0.9),
+        0 0 50px rgba(0, 255, 136, 0.5);
+    transform: scale(1.15) rotate(10deg);
+    animation-duration: 1s;
+}
+
+.logo-design:hover .logo-separator {
+    animation-duration: 1.2s;
+    color: #00ffdd;
+    text-shadow: 
+        0 0 20px rgba(0, 255, 221, 0.9),
+        0 0 35px rgba(0, 255, 136, 0.5),
+        0 0 50px rgba(0, 255, 136, 0.2);
+    transform: scale(1.15);
 }
 
 .logo {
